@@ -1,0 +1,27 @@
+.imgHoverSM{
+  transition:all s1;
+}
+.imgHoverSM:hover~.imgHoverSMIcons{
+  display: flex !important;
+}
+.imgHoverSMIcons:hover{
+  display: flex !important;
+}
+.imgHoverSMIcons > div > i:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.imgHover:hover{
+  filter: opacity(100%) !important;
+}
+.imgHover:hover~.imgHoverP{
+  opacity: 1 !important;
+}
+.imgHoverP:hover{
+  opacity: 1 !important;
+}
+
+#cover{
+  background-attachment: fixed;
+}

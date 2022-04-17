@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lab3 - Login Model</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v6.0.0/css/all.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color:#ffcc00dd">
+    <div class="row g-0">
+        <div class="col-8 offset-2 text-center shadow-1-strong" style="background-color: rgba(0, 0, 0, 0.220);">
+            <p class="m-3 h2" height="100vp" style="color:white">Welcome to ITI</p>
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-outline-light btn-lg" data-toggle="modal"
+                data-target="#myModal" data-backdrop="static">Login</button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade text-center" id="myModal" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered text-center">
+                <!-- Modal content-->
+                <div class="modal-content text-center">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Login</h4>
+                    </div>
+                    <form>
+                        <div class="modal-body text-center">
+                            <div class="container text-center" style="width:fit-content">
+                                <div class="form-group">
+                                    <span for="uname" class="fa fa-user fa-xl input-group-prepend"></span>
+                                    <input type="text" placeholder="Enter Username" name="uname" id="username" required>
+                                </div>
+                                <div class="form-group">
+                                    <span for="password" class="fa-solid fa-lock fa-xl input-group-prepend"></span>
+                                    <input type="password" placeholder="Enter Password" name="password" id="password" required>
+                                </div>
+                                <div class="error"></div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let users = [{
+            username: "admin",
+            pass: "12345"
+        }, {
+            username: "mrym",
+            pass: "12345"
+        }];
+
+        $(function () {
+            $("form").submit(function (e) {
+                e.preventDefault();
+                let user = $("#username").val();
+                let pass = $("#password").val();
+                for (let i = 0; i < users.length; i++) {
+                    if (user == users[i].username && pass == users[i].pass) {
+                        window.location.href = "Index.html";
+                        return;
+                    }
+                }
+                $(".error").append('<span style="color:red;">username or password do not match</span>');
+            });
+        }) //end of load 
+    </script>
+</body>
+
+</html>

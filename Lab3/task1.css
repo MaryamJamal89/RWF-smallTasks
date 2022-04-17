@@ -1,0 +1,93 @@
+/* NavBar */
+
+/* Carousel styling */
+#introCarousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item.active {
+  height: 100vh;
+}
+
+.carousel-item:nth-child(1) {
+  background-image: url("https://mdbootstrap.com/img/Photos/Others/images/76.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.carousel-item:nth-child(2) {
+  background-image: url("https://mdbootstrap.com/img/Photos/Others/images/77.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.carousel-item:nth-child(3) {
+  background-image: url("https://mdbootstrap.com/img/Photos/Others/images/78.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+/* Height for devices larger than 576px */
+@media (min-width: 992px) {
+  #introCarousel {
+    margin-top: -58.59px;
+  }
+
+  #introCarousel,
+  .carousel-inner,
+  .carousel-item,
+  .carousel-item.active {
+    height: 50vh;
+  }
+}
+
+.imgHoverSM~.imgHoverSMIcons{
+  opacity:0 !important;
+  transition: all 0.5s;
+}
+.imgHoverSM:hover~.imgHoverSMIcons{
+  opacity: 1 !important;
+}
+.imgHoverSMIcons:hover{
+  opacity: 1 !important;
+}
+.imgHoverSMIcons > div > i:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+
+.imgHover{
+  transition: all 1s;
+}
+.imgHover:hover{
+  filter: opacity(100%) !important;
+}
+.imgHoverP{
+  transition: all 1s !important;
+}
+.imgHover:hover~.imgHoverP{
+  filter: opacity(100%) !important;
+}
+.imgHoverP:hover{
+  filter: opacity(100%) !important;
+}
+
+.card-header{
+  justify-content: space-evenly;
+}
+.card-header > a > img{
+  height: 70px;
+  width: 70px;
+  border-radius:50%;
+}
+
+.card-header > a.active > img{
+  transform: scale(1.2);
+  border: 1px solid #000 ;
+}
