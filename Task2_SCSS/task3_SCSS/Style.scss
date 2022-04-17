@@ -1,0 +1,9 @@
+@mixin hstyle( $headerSize, $color) {
+    h#{$headerSize}{
+        color: $color;
+    }
+}
+
+@include hstyle(1, lightpink);
+@include hstyle(3, lightblue);
+@include hstyle(5, lightgreen);

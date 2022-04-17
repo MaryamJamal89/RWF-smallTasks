@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+        rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="task1.css" />
+    <title>Task1 CSS</title>
+</head>
+
+<body>
+    <div id="topPart">
+        <img id="hamburg-menu" src="src/hamburg-menu-2.png">
+        <div class="topnavSM" id="topnavSM">
+            <img id="exit-sm" src="src/exiticon.png">
+            <div>Home</div><br>
+            <div>News</div><br>
+            <div>Contact</div><br>
+            <div>About</div><br>
+        </div>
+        <div class="topnav">
+            <div class="active">Home</div>
+            <div>News</div>
+            <div>Contact</div>
+            <div>About</div>
+            <img id="logo" src="src/images.png" />
+        </div>
+        <div id="txtDiv">
+            <p>
+                Yourself required no at thoughts delicate landlord it be. Branched dashwood do is whatever it. Farther
+                be chapter at visited married in it pressed. By distrusts procuring be oh frankness existence believing
+                instantly if. Doubtful on an juvenile as of servants insisted. Judge why maids led sir whose guest drift
+                her point. Him comparison especially friendship was who sufficient attachment favourable how. Luckily
+                but minutes ask picture man perhaps are inhabit. How her good all sang more why.
+            </p>
+            <button>APPLAY NOW</button>
+        </div>
+    </div>
+    <h3>ITI Branches</h3>
+    <hr />
+    <div id="imgDiv">
+        <div>
+            <div class="icons">
+                <div class="hide">
+                    <img src="src/facebook.png" />
+                </div>
+                <div class="hide">
+                    <img src="src/twitter.png" />
+                </div>
+                <div class="hide">
+                    <img src="src/linkedin.png" />
+                </div>
+            </div>
+            <img src="src/Empty.png" />
+        </div>
+        <div>
+            <div class="icons">
+                <div class="hide">
+                    <img src="src/facebook.png" />
+                </div>
+                <div class="hide">
+                    <img src="src/twitter.png" />
+                </div>
+                <div class="hide">
+                    <img src="src/linkedin.png" />
+                </div>
+            </div>
+            <img src="src/Empty.png" />
+        </div>
+        <div>
+            <div class="icons">
+                <div class="hide">
+                    <img src="src/facebook.png" />
+                </div>
+                <div class="hide">
+                    <img src="src/twitter.png" />
+                </div>
+                <div class="hide">
+                    <img src="src/linkedin.png" />
+                </div>
+            </div>
+            <img src="src/Empty.png" />
+        </div>
+    </div>
+</body>
+
+<script>
+    let menuIcon = document.getElementById("hamburg-menu");
+    let exitIcon = document.getElementById("exit-sm");
+
+    menuIcon.addEventListener('click', () => {
+        let topnav = document.getElementById("topnavSM");
+        topnav.style.display = "block";
+        menuIcon.style.display = "none";
+    });
+
+    exitIcon.addEventListener('click', () => {
+        let topnav = document.getElementById("topnavSM");
+        topnav.style.display = "none";
+        menuIcon.style.display = "block";
+    })
+</script>
+
+</html>

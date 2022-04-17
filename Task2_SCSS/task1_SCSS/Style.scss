@@ -1,0 +1,43 @@
+$primeclr:blue;
+$lightclr:white;
+
+@mixin border($bclr) {
+    border: 4x;
+    border-style: solid;
+    border-color: $bclr;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.div {
+    height: fit-content;
+    padding: 30px;
+    text-align: center;
+}
+
+.div-dark {
+    background-color: black;
+    color: white;
+}
+
+.div-bright {
+    background-color: $lightclr;
+}
+
+p {
+    padding: 10px;
+}
+
+.div-border-blue {
+    @include border(blue);
+    p {
+        @include border(blue);
+    }
+}
+
+.div-border-green {
+    @include border(green);
+}

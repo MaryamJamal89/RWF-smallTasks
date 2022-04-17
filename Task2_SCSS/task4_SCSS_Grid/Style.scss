@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+//variables
+$light: white;
+$btnbginfo: rgb(160, 200, 220);
+$darkblue: rgb(80, 190, 230);
+
+@mixin gridDisplay($grid__cols: 12, $screenName: "", $breakPoint: 0) {
+    @if ($screenName == "") {
+        @media all and (min-width: $breakPoint) {
+            .d-block {
+                display: block !important;
+            }
+            .d-none {
+                display: none !important;
+            }
+            @for $i from 1 through $grid__cols {
+                .col-#{$i} {
+                    width: (100 / ($grid__cols / $i)) * 1%;
+                }
+                .offsit-#{$i}{
+                    margin-left: 100 / ($grid__cols / $i) * 1%;
+                }
+            }
+        }
+    } @else {
+        @media all and (min-width: $breakPoint) {
+            .d-#{$screenName}-block{
+                display: block !important;
+            }
+            .d-#{$screenName}-none{
+                display: none !important;
+            }
+            @for $i from 1 through $grid__cols {
+                .col-#{$screenName}-#{$i} {
+                    width: (100 / ($grid__cols / $i)) * 1%;
+                }
+                .offsit-#{$screenName}-#{$i}{
+                    margin-left: 100 / ($grid__cols / $i) * 1%;
+                }
+            }
+        }
+    }
+}
+
+@include gridDisplay(12, "", 0px);
+@include gridDisplay(12, "sm", 567px);
+@include gridDisplay(12, "md", 768px);
+@include gridDisplay(12, "lg", 992px);
+@include gridDisplay(12, "xl", 1200px);
+@include gridDisplay(12, "xxl", 1400px);
+
+%corner {
+    border-radius: 20px 0px;
+}
+
+body {
+    background-image: url("src/bg.jpg");
+}
+
+.text-center {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 2%;
+}
+
+img {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+#bigimg {
+    padding: 10px;
+}
+
+.img {
+    padding: 10px;
+    text-align: center;
+    height: fit-content;
+    border: 2px solid black;
+}
+
+.description {
+    padding: 10px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.header {
+    @extend %corner;
+    background-color: $btnbginfo;
+    border: 2px solid white;
+}
+
+.footer {
+    @extend %corner;
+    background-color: $darkblue;
+    min-height: 40px;
+    margin: 10px 20px 5px 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    div {
+        min-height: 40px;
+        margin: 10px;
+    }
+}
+
+.space {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}

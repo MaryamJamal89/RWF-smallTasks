@@ -1,0 +1,15 @@
+.p-1 {
+  border-style: dotted;
+  background-color: lightblue;
+}
+
+.p-2 {
+  border-style: solid;
+  background-color: pink;
+}
+
+.p-3 {
+  border-style: double;
+  background-color: green;
+}
+/*# sourceMappingURL=Style.css.map */

@@ -1,0 +1,25 @@
+Grid with 12 columns with the following functionalites :
+1-columns
+2-offset
+3-show
+4-hidden
+
+5-order-1...12
+order-screenname-1...12
+
+- utilities classes :
+mt
+mb
+ml
+mr
+mx
+my
+
+pt
+pl
+pb
+pr
+px
+py
+
+-----------------------------

@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  overflow: hidden;
+}
+
+.topnavSM{
+  text-align: center;
+  float: right;
+  display: none;
+  background-image: linear-gradient(to left, #f89751, #f8975142);
+}
+
+.topnavSM div{
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-bottom: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: border-bottom 2s;
+}
+
+.topnavSM div:hover {
+  color:#882200;
+  border-bottom: 1px solid hsl(0, 100%, 30%);
+}
+
+/* Style the links inside the navigation bar */
+.topnav div {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-bottom: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: border-bottom 2s;
+}
+
+/* Change the color of links on hover */
+.topnav div:hover {
+  background-color: hsla(0, 100%, 90%, 0.3);
+  color: #882200;
+  border-bottom: 1px solid hsl(0, 100%, 30%);
+}
+
+/* Add a color to the active/current link */
+.topnav div.active {
+  background-color: #ff6a00;
+  color: white;
+}
+
+#topPart {
+  background-image: url("src/desk3.jpg");
+  height: 550px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#logo {
+  height: 5em;
+  margin: 0.5%;
+  transition: height 0.5s;
+}
+
+#logo:hover {
+  filter: brightness(150%);
+  height: 5.5em;
+}
+
+#hamburg-menu{
+  display: none;
+  height: 30px;
+  color: white;
+  margin: 10px;
+  width: 26%;
+  margin: 5px 5px;
+}
+
+#exit-sm{
+  height: 30px;
+  color: white;
+  margin: 10px;
+  width: 26%;
+  margin: 5px 5px;
+}
+
+hr {
+  background-color: hsl(0, 100%, 30%);
+  height: 2px;
+  margin-bottom: 50px;
+  margin: 20px 20px;
+}
+
+#txtDiv {
+  margin: 0px 10%;
+  text-align: center;
+  background-color: #669ea27a;
+  position: absolute;
+  left: auto;
+  top: 40%;
+  padding: 20px;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-image: linear-gradient(#e96303, #f89751);
+  color: white;
+}
+
+h3 {
+  text-align: center;
+}
+
+#imgDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+#imgDiv > div {
+  width: 31%;
+  margin: 10px 10px;
+  box-sizing: border-box;
+  background-image: url("src/iti1.jpg");
+  background-size: cover;
+  transition: background-image 0.5s linear;
+}
+
+#imgDiv > div:hover {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      #f89751
+    ),
+    url("src/iti1.jpg");
+  background-size: cover;
+}
+
+#imgDiv > div:hover + .hide {
+  display: block;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-left: 10%;
+  position: relative;
+  top: 55%;
+}
+
+.icons > div {
+  width: 25%;
+  margin: 5px 5px;
+  box-sizing: border-box;
+  background-size: cover;
+  display: none;
+}
+
+.icons > div img {
+  width: 100%;
+}
+
+p {
+  font-size: 12;
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: #ECECEC;
+    padding:0px;
+    margin: 0px;
+  }
+
+  .topnav {
+    display: none;
+  }
+
+  #hamburg-menu {
+    display: block;
+    float: right;
+    height: 5%;
+    color: black;
+    margin: 10px;
+    width: 6%;
+    margin: 5px 5px;
+  }
+
+  #imgDiv{
+    flex-direction: column-reverse;
+  }
+
+  #imgDiv > div {
+    width: 90%;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    background-image: url("src/iti1.jpg");
+    background-size: cover;
+  }
+}

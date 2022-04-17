@@ -1,0 +1,16 @@
+@mixin pstyle( $borderStyle, $color) {
+    border-style: $borderStyle;
+    background-color: $color;
+}
+
+.p-1 {
+    @include pstyle(dotted, lightblue)
+}
+
+.p-2 {
+    @include pstyle(solid, pink)
+}
+
+.p-3 {
+    @include pstyle(double, green)
+}

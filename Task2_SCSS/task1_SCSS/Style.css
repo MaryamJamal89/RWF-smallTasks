@@ -1,0 +1,44 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.div {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px;
+  text-align: center;
+}
+
+.div-dark {
+  background-color: black;
+  color: white;
+}
+
+.div-bright {
+  background-color: white;
+}
+
+p {
+  padding: 10px;
+}
+
+.div-border-blue {
+  border: 4x;
+  border-style: solid;
+  border-color: blue;
+}
+
+.div-border-blue p {
+  border: 4x;
+  border-style: solid;
+  border-color: blue;
+}
+
+.div-border-green {
+  border: 4x;
+  border-style: solid;
+  border-color: green;
+}
+/*# sourceMappingURL=Style.css.map */
